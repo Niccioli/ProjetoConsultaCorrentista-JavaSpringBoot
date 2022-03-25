@@ -1,0 +1,58 @@
+package br.com.consulta.correntista.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name = "fluxo_caixa")
+public class FluxoFinanceiro {
+	
+	@Id
+	
+	@Column(name = "entrada")
+	private double entrada;
+	
+	@Column(name = "saida")
+	private double saida;
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "fluxo")
+	private ContaCliente contaCliente;
+	
+
+	public double getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(double entrada) {
+		this.entrada = entrada;
+	}
+
+	public double getSaida() {
+		return saida;
+	}
+
+	public void setSaida(double saida) {
+		this.saida = saida;
+	}
+
+	public ContaCliente getContaCliente() {
+		return contaCliente;
+	}
+
+	public void setContaCliente(ContaCliente contaCliente) {
+		this.contaCliente = contaCliente;
+	}
+	
+	
+	
+	
+
+}

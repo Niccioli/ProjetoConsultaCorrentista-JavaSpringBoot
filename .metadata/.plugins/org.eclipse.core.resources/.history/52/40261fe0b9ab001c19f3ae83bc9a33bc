@@ -1,0 +1,41 @@
+package br.com.consulta.correntista.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "fluxo_caixa")
+public class FluxoFinanceiro {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "entrada")
+	private double entrada;
+	
+	@Column(name = "saida")
+	private double saida;
+
+	public double getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(double entrada) {
+		this.entrada = entrada;
+	}
+
+	public double getSaida() {
+		return saida;
+	}
+
+	public void setSaida(double saida) {
+		this.saida = saida;
+	}
+	
+	
+	
+
+}

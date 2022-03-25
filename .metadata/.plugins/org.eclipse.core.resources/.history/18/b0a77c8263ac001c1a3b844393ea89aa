@@ -1,0 +1,27 @@
+package br.com.consulta.correntista.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.consulta.correntista.dao.ContaDao;
+import br.com.consulta.correntista.dao.FluxoDao;
+import br.com.consulta.correntista.model.ContaCliente;
+
+@RestController
+public class ContaController {
+	
+	@Autowired
+	private ContaDao cDao;
+	private FluxoDao fDao;
+	
+	@GetMapping("/contas")	
+	public ArrayList<ContaCliente> mostrarTudo(){
+		ArrayList<ContaCliente> lista;
+		lista = (ArrayList<ContaCliente>)cDao.findAll();
+		return lista;
+	}
+
+}

@@ -1,0 +1,3 @@
+srping.datasource.username=root
+spring.datasource.password=mysql
+spring.datasource.url=jdbc:mysql://localhost:3306/revisao?useTimezone=true&serverTimezone=UTC

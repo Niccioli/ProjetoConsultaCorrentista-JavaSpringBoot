@@ -1,0 +1,47 @@
+package br.com.consulta.correntista.model;
+
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbcliente")
+public class Cliente {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Column (name = "id")
+	private int id;
+	
+	@Column(name = "nome")
+	private String nome;
+	
+	@Column(name = "cpf")
+	private String conta;
+	
+	@Column(name = "telefone")
+	private String telefone;
+	
+	@Column(name = "email")
+	private String email;
+	
+//	@OneToMany(targetEntity = FluxoFinanceiro.class, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "Agencia", referencedColumnName = "Agencia")
+//	private List<FluxoFinanceiro> fluxoFinanceiro;
+	
+	
+	
+	
+	
+
+}

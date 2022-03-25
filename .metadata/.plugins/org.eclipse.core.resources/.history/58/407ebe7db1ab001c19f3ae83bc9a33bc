@@ -1,0 +1,5 @@
+package br.com.consulta.correntista.model;
+
+public class Conta {
+
+}

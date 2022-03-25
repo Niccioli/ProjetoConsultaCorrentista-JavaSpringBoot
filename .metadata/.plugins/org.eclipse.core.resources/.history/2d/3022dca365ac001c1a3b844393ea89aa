@@ -1,0 +1,9 @@
+package br.com.consulta.correntista.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.consulta.correntista.model.ContaCliente;
+
+public interface ContaDao extends CrudRepository<ContaCliente, Integer> {
+
+}
